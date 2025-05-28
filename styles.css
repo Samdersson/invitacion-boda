@@ -86,4 +86,45 @@ body {
 
 .elementor-widget-container {
     text-align: center;
+    justify-content: center;
+}
+
+/* New styles to center the "ver ubicacion" button */
+.elementor-widget-container {
+    display: flex;
+}
+
+.elementor-align-center {
+    text-align: center !important;
+    display: block !important;
+}
+
+.elementor-align-center a.elementor-button {
+    display: inline-block !important;
+    margin: 0 auto !important;
+}
+
+.elementor-element-d4d6d59,
+.elementor-align-center {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.elementor-element-d4d6d59 .elementor-button-wrapper {
+    display: block !important;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+.elementor-widget-container {
+    text-align: center;
+}
+
+.elementor-button-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
 }
