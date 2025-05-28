@@ -1,0 +1,89 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Envelope container */
+.envelope-container {
+    perspective: 1000px;
+}
+
+/* Envelope styling */
+.envelope {
+    width: 300px;
+    height: 400px;
+    background: #e0dfdb;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+/* Envelope flap */
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 200px 150px 0 150px;
+    border-color: #d6d4cd transparent transparent transparent;
+    transform-origin: bottom center;
+    transition: transform 1s ease;
+    z-index: 2;
+}
+
+/* Wax seal */
+.wax-seal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #b8860b;
+    color: black;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #b8860b;
+    user-select: none;
+    z-index: 3;
+}
+
+/* Invitation content */
+.invitation-content {
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Envelope open animation */
+.envelope.open {
+    transform: rotateX(-180deg);
+    cursor: default;
+}
+
+.envelope.open::before {
+    transform: rotateX(-180deg);
+}
+
+.elementor-widget-container {
+    text-align: center;
+}
